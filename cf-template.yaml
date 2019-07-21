@@ -206,10 +206,10 @@ Outputs:
     Description: The name of our newly created cluster
     Value:
       Ref: Cluster
-  EcsDNS:
-    Description: The DNS endpoint of your Load Balancer
-    Value:
-      Fn::GetAtt:
-      - ELB
-      - DNSName
+      #  EcsDNS:
+      #    Description: The DNS endpoint of your Load Balancer
+      #      Value:
+      #      Fn::GetAtt:
+      #      - ELB
+      #      - DNSName
 
