@@ -26,7 +26,7 @@ node {
     stage('Deploy to dev') {
       input "Deploy to Dev?"
       sh 'echo Deploy to Dev'
-      sh 'aws ecs update-service --service gogo-WebService-9L041BDEG1TP --force-new-deployment'
+      sh 'aws ecs update-service --cluster gogo-Cluster-HQ5I9FKMFLOU --service gogo-WebService-9L041BDEG1TP --region ap-southeast-1 --force-new-deployment'
       
     
     }
