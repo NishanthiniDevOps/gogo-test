@@ -2,10 +2,10 @@ Description: AWS ECS For nodejs application
 Parameters:
   VpcId:
     Type: AWS::EC2::VPC::Id
-    Description: Select a VPC that allows instances to access the Internet.
+    Description: Select a VPC .
   DockerImageURL:
     Type: String
-    Description: Url of the Docker Image to deploy and tag
+    Description: Url of the Docker Image to deploy
   SubnetIDs:
     Type: List<AWS::EC2::Subnet::Id>
     Description: Select at least two subnets in your selected VPC.
@@ -256,11 +256,11 @@ Resources:
         Ref: WebTaskDefinition
 Outputs:
   EcsCluster:
-    Description: The name of our newly created cluster
+    Description: The name of created cluster
     Value:
       Ref: Cluster
   EcsDNS:
-    Description: The DNS endpoint of your Load Balancer
+    Description: The DNS endpoint of Load Balancer
     Value:
       Fn::GetAtt:
       - ELB
